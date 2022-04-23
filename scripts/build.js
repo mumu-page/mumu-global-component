@@ -31,12 +31,12 @@ export default inputs.map((file) => {
       },
       {
         format: 'cjs',
-        file: getOutFile('lib', name_kebabcase, version),
+        file: getOutFile('cjs', name_kebabcase, version),
         exports: 'named',
         sourcemap: false,
       },
       {
-        file: getOutFile('dist', name_kebabcase, version),
+        file: getOutFile('umd', name_kebabcase, version),
         format: 'umd',
         sourcemap: false,
         name: name,
@@ -50,9 +50,7 @@ export default inputs.map((file) => {
     plugins: [
       clear({
         targets: [
-          getClearDir('es'),
-          getClearDir('lib'),
-          getClearDir('dist'),
+          getClearDir('build'),
         ],
       }),
       // dts(),
