@@ -29,7 +29,7 @@
     "dev": "npm-run-all --parallel dev:*",
     "start": "craco start",
     "test": "craco test",
-    "release": "mumu release",
+    "release": "mumu releaseCo",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -64,7 +64,6 @@
     "@types/lodash.kebabcase": "^4.1.7",
     "@types/lodash.uniqueid": "^4.0.7",
     "@types/lodash.upperfirst": "^4.3.7",
-    "@types/react": "^17.0.0",
     "@types/webpack-env": "^1.16.4",
     "craco-less": "^2.0.0",
     "less": "^4.1.1",
