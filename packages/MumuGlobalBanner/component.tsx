@@ -1,28 +1,23 @@
 import React from 'react'
-import config from './package.json';
 import style from "./index.module.less";
 
 interface MumuGlobalBannerProps {
-  data: any
+  link: string
+  src: string
 }
 
 function MumuGlobalBanner(props: MumuGlobalBannerProps) {
-  const { data } = props
+  const { link, src } = props
 
   return (
-    <a href={data.link}>
+    <a href={link}>
       <img
         className={style["global-banner"]}
-        src={data.src}
+        src={src}
         alt="图片"
       />
     </a>
   )
 }
 
-const Component = MumuGlobalBanner
-
-export {
-  Component,
-  config
-}
+export default MumuGlobalBanner
