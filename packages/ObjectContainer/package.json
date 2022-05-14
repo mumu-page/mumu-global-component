@@ -1,0 +1,14 @@
+{
+  "name": "object-container",
+  "description": "对象容器",
+  "version": "0.0.1",
+  "snapshot": "https://cloud.resonance.fun/?explorer/share/file&hash=f461A3PK3dPJe1AHTDJD4v4LBfA7Tc3gHisEUazpyMZgt4PnDm8NaDRLHgYDM284ZxFi",
+  "schema": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "data": {
+
+  }
+}

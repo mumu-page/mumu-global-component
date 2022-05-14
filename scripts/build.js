@@ -22,7 +22,7 @@ export default inputs.map((file) => {
   const name = upperFirst(camelCase(name_kebabcase))
 
   return {
-    input: getInputFile(name, './index.ts'),
+    input: getInputFile(name.replace('Mm', 'MM'), './index.ts'),
     output: [
       {
         format: 'es',

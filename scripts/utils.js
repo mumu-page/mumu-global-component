@@ -8,7 +8,7 @@ export const getPackageDir = (name, dir = 'lib') => {
 }
 
 export const getOutFile = (dir = 'lib', name, version) => {
-  return path.join(__dirname, '../', 'build', dir, name, `${name}_${version}.js`)
+  return path.join(__dirname, '../', 'build', dir, name, `${name}_v${version}.js`)
 }
 
 export const getDtsFile = (name, dir = 'lib') => {
