@@ -6,6 +6,7 @@
     "@jiaminghi/data-view-react": "^1.2.5",
     "antd": "^4.19.5",
     "axios": "^0.26.1",
+    "echarts": "^5.3.2",
     "lodash.camelcase": "^4.3.0",
     "lodash.clonedeep": "^4.5.0",
     "lodash.kebabcase": "^4.1.1",
@@ -16,8 +17,7 @@
   },
   "scripts": {
     "build": "rollup --config ./scripts/build.js",
-    "dev:build": "rollup --config ./scripts/build.js -w",
-    "dev": "npm-run-all --parallel dev:*",
+    "build:dev": "npm-run-all --parallel dev:*",
     "start": "craco start",
     "test": "craco test",
     "release": "mumu releaseCo",

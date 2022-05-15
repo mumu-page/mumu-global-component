@@ -1,7 +1,7 @@
 import React from 'react'
 // import style from "./index.module.less";
 // @ts-ignore
-import Decoration4 from '@jiaminghi/data-view-react/es/Decoration4'
+import {Decoration4} from '@jiaminghi/data-view-react'
 
 interface ComponentProps {
   color: string[]

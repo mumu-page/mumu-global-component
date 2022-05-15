@@ -6,7 +6,7 @@ import postcss from 'rollup-plugin-postcss'
 import typescript from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 import babel from '@rollup/plugin-babel'
-import { getInputFile, getOutFile, isProduction, inputs, getClearDir } from './utils'
+import { getInputFile, getOutFile, isProduction, packages, getClearDir } from './utils'
 import RollupPluginPeerDepsExternal from 'rollup-plugin-peer-deps-external'
 import upperFirst from "lodash.upperfirst";
 import camelCase from "lodash.camelcase";
@@ -14,8 +14,8 @@ import clear from 'rollup-plugin-clear'
 import path from 'path'
 // import dts from 'rollup-plugin-dts'
 
-export default inputs.map((file) => {
-  const config = require(path.resolve(`packages/${file}/package.json`));
+export default packages.map((file) => {
+  const config = require(path.resolve(`src/packages/${file}/package.json`));
   const peerDependencies = file.peerDependencies || {}
   const name_kebabcase = config.name
   const version = config.version
@@ -41,9 +41,11 @@ export default inputs.map((file) => {
         sourcemap: false,
         name: `${name_kebabcase}_v${version.replace(/\./g, '_')}`,
         globals: {
+          react: 'React',
           immer: 'immer',
           lodash: 'lodash',
-          react: 'React',
+          '@jiaminghi/data-view-react': 'datav',
+          echarts: 'echarts',
         },
       },
     ],
@@ -75,7 +77,7 @@ export default inputs.map((file) => {
       const external = Object.keys(peerDependencies)
       return (
         external.includes(id) ||
-        /^(react|rc|moment|monaco|@ant-design)/.test(id)
+        /^(react|rc|moment|echarts|@jiaminghi|@jiaminghi\/data-view-react|monaco|@ant-design)/.test(id)
       )
     },
   }

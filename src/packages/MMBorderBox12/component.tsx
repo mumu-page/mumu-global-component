@@ -1,7 +1,7 @@
 import React from 'react'
 // import style from "./index.module.less";
 // @ts-ignore
-import BorderBox12 from '@jiaminghi/data-view-react/es/BorderBox12'
+import {BorderBox12} from '@jiaminghi/data-view-react'
 import ObjectContainer from "../ObjectContainer/component";
 
 interface ComponentProps {
@@ -10,11 +10,11 @@ interface ComponentProps {
 }
 
 function Component(props: ComponentProps) {
-  const { color, backgroundColor } = props
+  const {color, backgroundColor} = props
 
   return (
     <BorderBox12 color={color} backgroundColor={backgroundColor}>
-      <ObjectContainer />
+      <ObjectContainer/>
     </BorderBox12>
   )
 }

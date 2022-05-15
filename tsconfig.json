@@ -27,7 +27,7 @@
     }
   },
   "include": [
-    "./packages/**/*",
-    "./typings/**/*",
+    "./src/packages/**/*",
+    "./typings/**/*"
   ]
 }

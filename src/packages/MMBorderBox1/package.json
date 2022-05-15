@@ -1,0 +1,37 @@
+{
+  "name": "mm-border-box1",
+  "description": "边框",
+  "version": "0.0.1",
+  "snapshot": "https://cloud.resonance.fun/?explorer/share/file&hash=bc9f3bI1zPdF2X--QMAjdSWLS3M2SxfdGi-9BWWTBeMjce4lyBd7D9Z5xWY2fBEGsk-d",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "color": {
+        "title": "自定义颜色",
+        "type": "string",
+        "format": "color"
+      },
+      "backgroundColor": {
+        "title": "背景色",
+        "type": "string",
+        "format": "color"
+      },
+      "padding": {
+        "title": "边距",
+        "type": "number",
+        "widget": "slider"
+      },
+      "height": {
+        "title": "高度",
+        "type": "number",
+        "widget": "slider"
+      }
+    },
+    "required": []
+  },
+  "data": {
+    "color": [],
+    "backgroundColor": "",
+    "padding": 30
+  }
+}

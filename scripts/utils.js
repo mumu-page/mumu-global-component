@@ -20,16 +20,7 @@ export const getClearDir = (dir = 'lib') => {
 }
 
 export const getInputFile = (name, source) => {
-  return path.resolve(__dirname, path.join('../packages/', name, source))
+  return path.resolve(__dirname, path.join('../src/packages/', name, source))
 }
 
-// const getOrder = (pkg) => {
-//   const order = pkg.get('order')
-//   return isNaN(order) ? 100 : order
-// }
-
-export const packages = shell.ls('packages')
-
-export const devPackages = packages
-
-export const inputs = isProduction ? packages : devPackages
+export const packages = shell.ls('src/packages')

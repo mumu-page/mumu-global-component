@@ -1,7 +1,7 @@
 import React from 'react'
 // import style from "./index.module.less";
 // @ts-ignore
-import Decoration5 from '@jiaminghi/data-view-react/es/Decoration5'
+import {Decoration2} from '@jiaminghi/data-view-react'
 
 interface ComponentProps {
   color: string[]
@@ -9,10 +9,10 @@ interface ComponentProps {
 }
 
 function Component(props: ComponentProps) {
-  const {color, style = {width: '300px', height: '40px'}} = props
+  const { color, style } = props
 
   return (
-    <Decoration5 style={style} color={color}/>
+    <Decoration2 reverse style={style} color={color} />
   )
 }
 
